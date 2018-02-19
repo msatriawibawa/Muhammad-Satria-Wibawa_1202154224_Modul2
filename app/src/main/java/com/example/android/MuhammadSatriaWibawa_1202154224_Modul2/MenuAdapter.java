@@ -24,8 +24,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
         this.mFoodList = foodList;
         this.mPriceList = priceList;
         this.mPhotoList = photoList;
-    }
-
+        
     @Override
     public MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View mItemView = mInflater.inflate(R.layout.list_menu, parent, false);
@@ -63,7 +62,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
                 public void onClick(View view) {
                     // Dapatkan posisi item yang diklik
                     int mPosition = getLayoutPosition();
-                    // Gunakan itu untuk mengakses item yang terpengaruh di mWordList.
+                    
                     String food = mFoodList.get(mPosition);
                     Integer price = mPriceList.get(mPosition);
                     Integer photo = mPhotoList.get(mPosition);
